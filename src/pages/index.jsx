@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom"
 import { CharacterDetail } from "./character/character-detail"
 import { CharacterList } from "./character/character-list"
 import { EpisodeDetail } from "./episode/episode-detail"
@@ -14,7 +14,11 @@ export function Pages() {
       <BrowserRouter>
         <nav className="navbar">
           <ul className="list">
-            <li><NavLink to="/">Home</NavLink></li>
+            <li>
+              <Link to="/">
+                <img className="logo" src="../images/logo.png" alt="Home" />
+              </Link>
+            </li>
             <li><NavLink to="/characters">Characters</NavLink></li>
             <li><NavLink to="/episodes">Episodes</NavLink></li>
             <li><NavLink to="/locations">Locations</NavLink></li>
