@@ -1,3 +1,4 @@
+const CopyPlugin = require("copy-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const path = require("path")
 
@@ -13,6 +14,14 @@ module.exports = {
     extensions: [".js", ".jsx"]
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src/images"),
+          to: path.resolve(__dirname, "dist/images")
+        }
+      ]
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public/index.html")
     })
