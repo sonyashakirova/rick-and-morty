@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom"
 import { CharacterDetail } from "./character/character-detail"
 import { CharacterList } from "./character/character-list"
 import { EpisodeDetail } from "./episode/episode-detail"
@@ -12,6 +12,14 @@ export function Pages() {
   return (
     <div className="app-wrapper">
       <BrowserRouter>
+        <nav className="navbar">
+          <ul className="list">
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/characters">Characters</NavLink></li>
+            <li><NavLink to="/episodes">Episodes</NavLink></li>
+            <li><NavLink to="/locations">Locations</NavLink></li>
+          </ul>
+        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/characters">
