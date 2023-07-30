@@ -199,7 +199,7 @@ main {
   }
   
   .navbar {
-    width: 50%;
+    width: 40%;
     font-size: 24px;
   }
 
@@ -236,7 +236,6 @@ main {
   }
 
   .home-image {
-    height: calc(100vh - 100px);
-    margin-right: 50px;
+    max-height: calc(100vh - 100px);
   }
 }
