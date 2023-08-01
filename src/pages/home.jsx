@@ -1,6 +1,6 @@
 export function Home() {
   return (
-    <div>
+    <div className="home-wrapper">
       <h1 className="visually-hidden">Home</h1>
       <img
         className="home-image"
