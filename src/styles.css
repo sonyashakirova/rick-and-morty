@@ -16,7 +16,7 @@ main {
 
 .app-wrapper {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 2fr 4fr 1fr;
   gap: 20px;
   padding: 40px;
 }
@@ -114,6 +114,21 @@ main {
   background-color: #FBF182;
 }
 
+.user-block {
+  width: max-content;
+  height: max-content;
+  padding: 20px;
+  background-color: #D7E8EB;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  margin-top: 30px;
+}
+
+.user-block p {
+  margin: 0 0 10px;
+}
+
 .title {
   text-transform: uppercase;
   margin-top: 0;
@@ -132,11 +147,26 @@ main {
   width: max-content;
 }
 
+.button-ghost,
 .sort-label {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
   margin-right: 10px;
+}
+
+.button-ghost {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-ghost:hover {
+  color: #D2C30B;
 }
 
 .arrow-up,
