@@ -8,21 +8,22 @@ import { LocationList } from "./location/location-list"
 import { NotFound } from "./not-found"
 import { Home } from "./home"
 import { Login } from "./login"
+import { PrivateRoute } from "../components/private-route"
 
 export function Pages() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/characters">
+      <Route path="/characters" element={<PrivateRoute />}>
         <Route index element={<CharacterList />} />
         <Route path=":id" element={<CharacterDetail />} />
       </Route>
-      <Route path="/episodes">
+      <Route path="/episodes" element={<PrivateRoute />}>
         <Route index element={<EpisodeList />} />
         <Route path=":id" element={<EpisodeDetail />} />
       </Route>
-      <Route path="/locations">
+      <Route path="/locations" element={<PrivateRoute />}>
         <Route index element={<LocationList />} />
         <Route path=":id" element={<LocationDetail />} />
       </Route>
