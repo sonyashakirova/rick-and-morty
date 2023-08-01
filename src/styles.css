@@ -135,6 +135,78 @@ main {
   font-size: 26px;
 }
 
+.button {
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin-top: 10px;
+  width: fit-content;
+  padding: 0 18px;
+  transition: border-color 100ms ease;
+  -webkit-transition: border-color 100ms ease;
+  min-height: 36px;
+  cursor: pointer;
+  background-color: #15778A;
+  color: #ffffff;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: #126676;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.input-label {
+  font-weight: 600;
+}
+
+.input-container {
+  position: relative;
+  margin-top: 6px;
+}
+
+.input {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  resize: none;
+  width: 300px;
+  color: #15778A;
+  display: block;
+  text-align: left;
+  border: none;
+  background-color: #D7E8EB;
+  -webkit-transition: border-color 100ms ease;
+  transition: border-color 100ms ease;
+  min-height: 30px;
+  padding: 1px 14px;
+  height: 42px;
+}
+
+.input::placeholder {
+  color: #15778A;
+  opacity: 0.5;
+} 
+
+.input:focus {
+  outline: none;
+} 
+
 .sort {
   border: none;
   background-color: #D7E8EB;

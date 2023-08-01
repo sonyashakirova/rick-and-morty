@@ -7,11 +7,13 @@ import { LocationDetail } from "./location/location-detail"
 import { LocationList } from "./location/location-list"
 import { NotFound } from "./not-found"
 import { Home } from "./home"
+import { Login } from "./login"
 
 export function Pages() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/characters">
         <Route index element={<CharacterList />} />
         <Route path=":id" element={<CharacterDetail />} />
