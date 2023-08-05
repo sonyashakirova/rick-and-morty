@@ -3,7 +3,7 @@ import { Sort } from "../../components/sort"
 import locations from "../../data/location.json"
 import { sortByDate } from "../../helpers/sort-by-date"
 
-export function LocationList() {
+function LocationList() {
   const [searchParams, setSearchParams] = useSearchParams({ sort: "ASC" })
   const sortingType = searchParams.get("sort")
   const sortedLocations = sortByDate(locations, sortingType)
@@ -25,3 +25,5 @@ export function LocationList() {
     </div>
   )
 }
+
+export default LocationList

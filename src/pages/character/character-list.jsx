@@ -3,7 +3,7 @@ import { Sort } from "../../components/sort"
 import characters from "../../data/characters.json"
 import { sortByDate } from "../../helpers/sort-by-date"
 
-export function CharacterList() {
+function CharacterList() {
   const [searchParams, setSearchParams] = useSearchParams({ sort: "ASC" })
   const sortingType = searchParams.get("sort")
   const sortedCharacters = sortByDate(characters, sortingType)
@@ -25,3 +25,5 @@ export function CharacterList() {
     </div>
   )
 }
+
+export default CharacterList

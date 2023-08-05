@@ -8,7 +8,7 @@ const initialValues = {
   password: "",
 }
 
-export function Login() {
+function Login() {
   const { user, login, logout } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
@@ -57,3 +57,5 @@ export function Login() {
     </div>
   )
 }
+
+export default Login
