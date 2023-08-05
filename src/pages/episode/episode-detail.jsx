@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import episodes from "../../data/episode.json"
 
-export function EpisodeDetail() {
+function EpisodeDetail() {
   const { id } = useParams()
   const episode = episodes.find((item) => item.id.toString() === id)
   
@@ -13,3 +13,5 @@ export function EpisodeDetail() {
     </div>
   )
 }
+
+export default EpisodeDetail

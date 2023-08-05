@@ -3,7 +3,7 @@ import episodes from "../../data/episode.json"
 import { sortByDate } from "../../helpers/sort-by-date"
 import { Sort } from "../../components/sort"
 
-export function EpisodeList() {
+function EpisodeList() {
   const [searchParams, setSearchParams] = useSearchParams({ sort: "ASC" })
   const sortingType = searchParams.get("sort")
   const sortedEpisodes = sortByDate(episodes, sortingType)
@@ -25,3 +25,5 @@ export function EpisodeList() {
     </div>
   )
 }
+
+export default EpisodeList

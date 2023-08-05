@@ -1,4 +1,4 @@
-export function Home() {
+function Home() {
   return (
     <div className="home-wrapper">
       <h1 className="visually-hidden">Home</h1>
@@ -10,3 +10,5 @@ export function Home() {
     </div>
   )
 }
+
+export default Home

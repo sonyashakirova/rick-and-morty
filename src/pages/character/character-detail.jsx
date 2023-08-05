@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import characters from "../../data/characters.json"
 
-export function CharacterDetail() {
+function CharacterDetail() {
   const { id } = useParams()
   const character = characters.find((item) => item.id.toString() === id)
   
@@ -22,3 +22,5 @@ export function CharacterDetail() {
     </div>
   )
 }
+
+export default CharacterDetail

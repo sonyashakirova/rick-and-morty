@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import locations from "../../data/location.json"
 
-export function LocationDetail() {
+function LocationDetail() {
   const { id } = useParams()
   const location = locations.find((item) => item.id.toString() === id)
   
@@ -13,3 +13,5 @@ export function LocationDetail() {
     </div>
   )
 }
+
+export default LocationDetail
