@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom"
+import logo from "../images/logo.png"
 
 export function Navigation() {
   return (
@@ -6,7 +7,7 @@ export function Navigation() {
       <ul className="list">
         <li>
           <Link to="/">
-            <img className="logo" src="../images/logo.png" alt="Home" />
+            <img className="logo" src={logo} alt="Home" />
           </Link>
         </li>
         <li><NavLink to="/characters">Characters</NavLink></li>
