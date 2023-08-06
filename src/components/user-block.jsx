@@ -10,7 +10,7 @@ export function UserBlock() {
   }
 
   return (
-    <header className="user-block">
+    <div className="user-block">
       {user === null
         ? <NavLink className="button-ghost" to="/login">
             Login
@@ -22,6 +22,6 @@ export function UserBlock() {
             </button>
           </div>
       }
-    </header>
+    </div>
   )
 }
