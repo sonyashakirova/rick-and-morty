@@ -1,12 +1,19 @@
 import { useSearchParams } from "react-router-dom"
 import { ErrorBoundary, List, Sort } from "../../components"
-import locations from "../../data/location.json"
 import { sortByDate } from "../../helpers/sort-by-date"
+import { useInfinityScroll } from "../../hooks/useInfinityScroll"
 
 function LocationList() {
+  const {
+    loading,
+    error,
+    items,
+    lastNodeRef,
+  } = useInfinityScroll("location")
+
   const [searchParams, setSearchParams] = useSearchParams({ sort: "ASC" })
   const sortingType = searchParams.get("sort")
-  const sortedLocations = sortByDate(locations, sortingType)
+  const sortedLocations = sortByDate(items, sortingType)
 
   return (
     <div className="content-wrapper">
@@ -16,7 +23,13 @@ function LocationList() {
         onChange={(e) => setSearchParams({ sort: e.target.value })}
       />
       <ErrorBoundary>
-        <List category="locations" items={sortedLocations} />
+        <List
+          category="locations"
+          items={sortedLocations}
+          lastNodeRef={lastNodeRef}
+          loading={loading}
+          error={error}
+        />
       </ErrorBoundary>
     </div>
   )
