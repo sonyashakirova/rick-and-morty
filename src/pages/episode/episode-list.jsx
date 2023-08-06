@@ -1,7 +1,7 @@
-import { Link, useSearchParams } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
+import { List, Sort } from "../../components"
 import episodes from "../../data/episode.json"
 import { sortByDate } from "../../helpers/sort-by-date"
-import { Sort } from "../../components/sort"
 
 function EpisodeList() {
   const [searchParams, setSearchParams] = useSearchParams({ sort: "ASC" })
@@ -15,13 +15,7 @@ function EpisodeList() {
         value={sortingType}
         onChange={(e) => setSearchParams({ sort: e.target.value })}
       />
-      <ul className="list">
-        {sortedEpisodes.map(({ id, name, episode }) => (
-          <li key={id}>
-            <Link to={`/episodes/${id}`}>{name} ({episode})</Link>
-          </li>
-        ))}
-      </ul>
+      <List category="episodes" items={sortedEpisodes} />
     </div>
   )
 }

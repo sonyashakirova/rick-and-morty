@@ -1,7 +1,6 @@
 import { lazy } from "react"
 import { Route, Routes } from "react-router-dom"
-import { PrivateRoute } from "../components/private-route"
-import { SuspenseRoute } from "../components/suspense-route"
+import { PrivateRoute, SuspenseRoute } from "../components"
 
 const Home = lazy(() => import("./home"))
 const Login = lazy(() => import("./login"))
