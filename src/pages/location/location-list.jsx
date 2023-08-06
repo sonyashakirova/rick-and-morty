@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom"
-import { List, Sort } from "../../components"
+import { ErrorBoundary, List, Sort } from "../../components"
 import locations from "../../data/location.json"
 import { sortByDate } from "../../helpers/sort-by-date"
 
@@ -15,7 +15,9 @@ function LocationList() {
         value={sortingType}
         onChange={(e) => setSearchParams({ sort: e.target.value })}
       />
-      <List category="locations" items={sortedLocations} />
+      <ErrorBoundary>
+        <List category="locations" items={sortedLocations} />
+      </ErrorBoundary>
     </div>
   )
 }

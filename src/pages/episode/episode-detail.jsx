@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import { ErrorBoundary } from "../../components"
 import episodes from "../../data/episode.json"
 
 function EpisodeCard({ episode }) {
@@ -17,7 +18,9 @@ function EpisodeDetail() {
   
   return (
     <div className="content-wrapper">
-      <EpisodeCard episode={episode} />
+      <ErrorBoundary>
+        <EpisodeCard episode={episode} />
+      </ErrorBoundary>
     </div>
   )
 }
