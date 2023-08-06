@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import { ErrorBoundary } from "../../components"
 import characters from "../../data/characters.json"
 
 function CharacterCard({ character }) {
@@ -26,7 +27,9 @@ function CharacterDetail() {
   
   return (
     <div className="content-wrapper">
-      <CharacterCard character={character} />
+      <ErrorBoundary>
+        <CharacterCard character={character} />
+      </ErrorBoundary>
     </div>
   )
 }

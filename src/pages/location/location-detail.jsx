@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom"
+import { ErrorBoundary } from "../../components"
 import locations from "../../data/location.json"
 
 function LocationCard({ location }) {
@@ -17,7 +18,9 @@ function LocationDetail() {
   
   return (
     <div className="content-wrapper">
-      <LocationCard location={location} />
+      <ErrorBoundary>
+        <LocationCard location={location} />
+      </ErrorBoundary>
     </div>
   )
 }
