@@ -1,7 +1,7 @@
 import { lazy } from "react"
 import { useParams } from "react-router-dom"
-import { ErrorBoundary } from "../../components"
-import locations from "../../data/location.json"
+import { ErrorBoundary, Loading } from "../../components"
+import { useGetItem } from "../../hooks/useGetItem"
 
 const NotFound = lazy(() => import("../not-found"))
 
@@ -17,9 +17,11 @@ function LocationCard({ location }) {
 
 function LocationDetail() {
   const { id } = useParams()
-  const location = locations.find((item) => item.id.toString() === id)
+  const { item, loading, error } = useGetItem("location", id)
 
-  if (!episode) {
+  if (loading) return <Loading />
+
+  if (error) {
     return (
       <SuspenseRoute>
         <NotFound />
@@ -30,7 +32,7 @@ function LocationDetail() {
   return (
     <div className="content-wrapper">
       <ErrorBoundary>
-        <LocationCard location={location} />
+        <LocationCard location={item} />
       </ErrorBoundary>
     </div>
   )
