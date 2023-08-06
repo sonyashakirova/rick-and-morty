@@ -1,10 +1,12 @@
+import homeImage from "../images/rick-and-morty.png" 
+
 function Home() {
   return (
     <div className="home-wrapper">
       <h1 className="visually-hidden">Home</h1>
       <img
         className="home-image"
-        src="../images/rick-and-morty.png"
+        src={homeImage}
         alt="Rick and Morty"
       />
     </div>
