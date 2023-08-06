@@ -1,7 +1,7 @@
 import { lazy } from "react"
 import { useParams } from "react-router-dom"
-import { ErrorBoundary } from "../../components"
-import episodes from "../../data/episode.json"
+import { ErrorBoundary, Loading } from "../../components"
+import { useGetItem } from "../../hooks/useGetItem"
 
 const NotFound = lazy(() => import("../not-found"))
 
@@ -17,9 +17,11 @@ function EpisodeCard({ episode }) {
 
 function EpisodeDetail() {
   const { id } = useParams()
-  const episode = episodes.find((item) => item.id.toString() === id)
+  const { item, loading, error } = useGetItem("episode", id)
 
-  if (!episode) {
+  if (loading) return <Loading />
+
+  if (error) {
     return (
       <SuspenseRoute>
         <NotFound />
@@ -30,7 +32,7 @@ function EpisodeDetail() {
   return (
     <div className="content-wrapper">
       <ErrorBoundary>
-        <EpisodeCard episode={episode} />
+        <EpisodeCard episode={item} />
       </ErrorBoundary>
     </div>
   )

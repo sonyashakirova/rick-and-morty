@@ -1,6 +1,7 @@
 export { ErrorBoundary } from "./error-boundary"
 export { Input } from "./input"
 export { List } from "./list"
+export { Loading } from "./loading"
 export { Navigation } from "./navigation"
 export { PrivateRoute } from "./private-route"
 export { Sort } from "./sort"
