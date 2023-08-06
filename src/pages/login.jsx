@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { Input } from "../components/input"
+import { Input } from "../components"
 import { useAuth } from "../context/auth-provider"
 import { useLocation, useNavigate } from "react-router-dom"
 

@@ -1,5 +1,5 @@
-import { Link, useSearchParams } from "react-router-dom"
-import { Sort } from "../../components/sort"
+import { useSearchParams } from "react-router-dom"
+import { List, Sort } from "../../components"
 import characters from "../../data/characters.json"
 import { sortByDate } from "../../helpers/sort-by-date"
 
@@ -15,13 +15,7 @@ function CharacterList() {
         value={sortingType}
         onChange={(e) => setSearchParams({ sort: e.target.value })}
       />
-      <ul className="list">
-        {sortedCharacters.map(({ id, name }) => (
-          <li key={id}>
-            <Link to={`/characters/${id}`}>{name}</Link>
-          </li>
-        ))}
-      </ul>
+      <List category="characters" items={sortedCharacters} />
     </div>
   )
 }

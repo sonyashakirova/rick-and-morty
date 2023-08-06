@@ -1,6 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { UserBlock } from "./components/user-block";
-import { Navigation } from "./components/navigation";
+import { Navigation, UserBlock } from "./components";
 import { AuthProvider } from "./context/auth-provider";
 import { Pages } from "./pages";
 import "./styles.css"
