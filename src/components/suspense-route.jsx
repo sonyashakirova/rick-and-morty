@@ -9,10 +9,10 @@ function Loading() {
   )
 }
 
-export function SuspenseRoute() {
+export function SuspenseRoute({ children }) {
   return (
     <Suspense fallback={<Loading />}>
-      <Outlet />
+      {children || <Outlet />}
     </Suspense>
   )
 }
