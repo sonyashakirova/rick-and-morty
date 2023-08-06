@@ -1,6 +1,9 @@
+import { lazy } from "react"
 import { useParams } from "react-router-dom"
-import { ErrorBoundary } from "../../components"
+import { ErrorBoundary, SuspenseRoute } from "../../components"
 import characters from "../../data/characters.json"
+
+const NotFound = lazy(() => import("../not-found"))
 
 function CharacterCard({ character }) {
   return (
@@ -24,7 +27,15 @@ function CharacterCard({ character }) {
 function CharacterDetail() {
   const { id } = useParams()
   const character = characters.find((item) => item.id.toString() === id)
-  
+
+  if (!character) {
+    return (
+      <SuspenseRoute>
+        <NotFound />
+      </SuspenseRoute>
+    )
+  }
+
   return (
     <div className="content-wrapper">
       <ErrorBoundary>
