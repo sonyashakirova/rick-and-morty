@@ -1,7 +1,6 @@
 import { useSearchParams } from "react-router-dom"
-import { Sort } from "../../components"
 import { useInfinityScroll } from "shared/hooks"
-import { ErrorBoundary, List } from "shared/ui"
+import { ErrorBoundary, List, Sorting } from "shared/ui"
 import { sortByDate } from "shared/utils"
 
 function LocationList() {
@@ -19,7 +18,7 @@ function LocationList() {
   return (
     <div className="content-wrapper">
       <h1 className="title">Locations</h1>
-      <Sort
+      <Sorting
         value={sortingType}
         onChange={(e) => setSearchParams({ sort: e.target.value })}
       />
