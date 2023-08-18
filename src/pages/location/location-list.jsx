@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom"
 import { ErrorBoundary, List, Sort } from "../../components"
-import { sortByDate } from "../../helpers/sort-by-date"
 import { useInfinityScroll } from "shared/hooks"
+import { sortByDate } from "shared/utils"
 
 function LocationList() {
   const {
