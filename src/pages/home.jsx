@@ -1,4 +1,4 @@
-import homeImage from "../images/rick-and-morty.png" 
+import homeImage from "shared/images/rick-and-morty.png" 
 
 function Home() {
   return (
