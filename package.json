@@ -26,6 +26,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@mantine/core": "^6.0.19",
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
