@@ -5,6 +5,20 @@
   width: 250px;
 }
 
+@media (max-width: 900px) {
+  .navigation {
+    width: 150px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .mantine-NavLink-root {
   text-transform: uppercase;
 }
