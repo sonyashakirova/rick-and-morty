@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { Outlet } from "react-router-dom"
-import { Loading } from "./loading"
+import { Loading } from "../../components"
 
 export function SuspenseRoute({ children }) {
   return (
