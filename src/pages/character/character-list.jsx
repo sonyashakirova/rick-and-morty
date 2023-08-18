@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom"
-import { ErrorBoundary, List, Sort } from "../../components"
+import { List, Sort } from "../../components"
 import { useInfinityScroll } from "shared/hooks"
+import { ErrorBoundary } from "shared/ui"
 import { sortByDate } from "shared/utils"
 
 function CharacterList() {

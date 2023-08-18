@@ -1,4 +1,3 @@
-export { ErrorBoundary } from "./error-boundary"
 export { Input } from "./input"
 export { List } from "./list"
 export { Loading } from "./loading"
