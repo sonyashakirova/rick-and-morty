@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+import { List as MantineList } from "@mantine/core"
+import { Link } from "react-router-dom"
+import "./List.css"
 
 export function List({
   category,
@@ -8,18 +10,18 @@ export function List({
   loading,
 }) {
   return (
-    <ul className="list">
+    <MantineList listStyleType="none">
       {items.map(({ id, name }, index) => {
         const ref = items.length - 10 === index + 1 ? lastNodeRef : null
 
         return (
-          <li ref={ref} key={id}>
-            <Link to={`/${category}/${id}`}>{name}</Link>
-          </li>
+          <MantineList.Item ref={ref} key={id} pb={4}>
+            <Link to={`/${category}/${id}`} className="list-item-link">{name}</Link>
+          </MantineList.Item>
         )
       })}
       {loading && <p>Loading...</p>}
       {error && <p>Something went wrong!</p>}
-    </ul>
+    </MantineList>
   )
 }
