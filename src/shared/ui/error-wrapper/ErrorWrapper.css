@@ -1,0 +1,11 @@
+.error-wrapper {
+  background-color: #FBF182;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  padding: 50px;
+}
