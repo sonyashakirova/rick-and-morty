@@ -1,7 +1,7 @@
 import { lazy } from "react"
 import { useParams } from "react-router-dom"
 import { ErrorBoundary, Loading, SuspenseRoute } from "../../components"
-import { useGetItem } from "../../hooks/useGetItem"
+import { useGetItem } from "shared/hooks"
 
 const NotFound = lazy(() => import("../not-found"))
 

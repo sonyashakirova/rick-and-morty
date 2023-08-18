@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom"
 import { ErrorBoundary, List, Sort } from "../../components"
 import { sortByDate } from "../../helpers/sort-by-date"
-import { useInfinityScroll } from "../../hooks/useInfinityScroll"
+import { useInfinityScroll } from "shared/hooks"
 
 function EpisodeList() {
   const {
