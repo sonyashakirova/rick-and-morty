@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { Input } from "../components"
-import { useAuth } from "../context/auth-provider"
+import { useAuth } from "shared/hooks"
 import { useLocation, useNavigate } from "react-router-dom"
 
 const initialValues = {

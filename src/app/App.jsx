@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom"
 import { Pages } from "pages"
-import { AuthProvider } from "../context/auth-provider"
+import { AuthProvider } from "./providers"
 import { Navigation, UserBlock } from "../components"
 import "../styles.css"
 
