@@ -1,11 +1,14 @@
+import { Flex, Title } from "@mantine/core"
+import { ErrorWrapper } from "shared/ui"
+
 function NotFound() {
   return (
-    <div className="error-wrapper">
-      <div className="error">
-        <h1 className="title">404 Error</h1>
+    <Flex direction="column" align="center" justify="center" h="100%">
+      <ErrorWrapper>
+        <Title>404 Error</Title>
         <p>Sorry, this page does not exist :(</p>
-      </div>
-    </div>
+      </ErrorWrapper>
+    </Flex>
   )
 }
 

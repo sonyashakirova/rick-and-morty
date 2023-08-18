@@ -1,5 +1,6 @@
 export { Drawer } from "./drawer"
 export { ErrorBoundary } from "./error-boundary"
+export { ErrorWrapper } from "./error-wrapper"
 export { List } from "./list"
 export { Loading } from "./loading"
 export { Logo } from "./logo"
