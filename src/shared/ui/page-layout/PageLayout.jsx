@@ -1,6 +1,5 @@
 import { Outlet } from "react-router"
-import { UserBlock } from "../../../components"
-import { Logo, Navigation } from "shared/ui"
+import { Logo, Navigation, UserBlock } from "shared/ui"
 import "./PageLayout.css"
 
 export function PageLayout({ children }) {
