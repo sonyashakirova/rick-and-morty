@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom"
-import logo from "../images/logo.png"
+import logo from "shared/images/logo.png"
 
 export function Navigation() {
   return (
