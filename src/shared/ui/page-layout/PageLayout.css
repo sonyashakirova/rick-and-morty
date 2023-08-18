@@ -1,0 +1,25 @@
+.layout {
+  display: flex;
+  gap: 30px;
+}
+
+.layout-sidebar {
+  padding: 30px;
+  height: 100svh;
+  min-width: 400px;
+  position: sticky;
+  top: 0;
+}
+
+.layout-main {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  margin-right: 200px;
+}
+
+.layout-right-block {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+}

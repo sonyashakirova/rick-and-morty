@@ -1,7 +1,6 @@
 import { BrowserRouter } from "react-router-dom"
 import { Pages } from "pages"
 import { AuthProvider, ThemeProvider } from "./providers"
-import { Navigation, UserBlock } from "../components"
 import "../styles.css"
 
 export function App() {
@@ -9,11 +8,7 @@ export function App() {
     <ThemeProvider>
       <AuthProvider>
         <BrowserRouter>
-          <div className="app-wrapper">
-            <Navigation />
-            <Pages />
-            <UserBlock />
-          </div>
+          <Pages />
         </BrowserRouter>
       </AuthProvider>
     </ThemeProvider>
