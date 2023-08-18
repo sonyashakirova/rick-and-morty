@@ -1,18 +1,21 @@
+import { Flex, Text, Title } from "@mantine/core"
 import { lazy } from "react"
 import { useParams } from "react-router-dom"
 import { useGetItem } from "shared/hooks"
 import { SuspenseRoute } from "shared/routing"
 import { ErrorBoundary, Loading } from "shared/ui"
 
-const NotFound = lazy(() => import("../not-found"))
+const NotFound = lazy(() => import("pages/not-found"))
 
 function EpisodeCard({ episode }) {
   return (
-    <div>
-      <h1 className="title">{episode.name}</h1>
-      <p>Episode: {episode.episode}</p>
-      <p>Air date: {episode.air_date}</p>
-    </div>
+    <Flex direction="column" gap="md">
+      <Title>{episode.name}</Title>
+      <Flex direction="column" gap={4}>
+        <Text>Episode: {episode.episode}</Text>
+        <Text>Air date: {episode.air_date}</Text>
+      </Flex>
+    </Flex>
   )
 }
 
@@ -31,11 +34,9 @@ function EpisodeDetail() {
   }
 
   return (
-    <div className="content-wrapper">
-      <ErrorBoundary>
-        <EpisodeCard episode={item} />
-      </ErrorBoundary>
-    </div>
+    <ErrorBoundary>
+      <EpisodeCard episode={item} />
+    </ErrorBoundary>
   )
 }
 
