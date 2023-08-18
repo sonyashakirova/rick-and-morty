@@ -1,0 +1,16 @@
+.navigation {
+  margin: 0;
+  padding: 30px;
+  list-style: none;
+  width: 250px;
+}
+
+.mantine-NavLink-root {
+  text-transform: uppercase;
+}
+
+.mantine-NavLink-root:hover,
+.mantine-NavLink-root:active {
+  border-radius: 10px;
+  background-color: #FBF182;
+}

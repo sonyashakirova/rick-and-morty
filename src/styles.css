@@ -38,45 +38,6 @@
   color: #D2C30B;
 }
 
-.navbar {
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.navbar .list {
-  flex-direction: column;
-  gap: 20px;
-}
-
-.navbar li {
-  position: relative;
-}
-
-.navbar li:not(:first-child) {
-  margin-left: 60px;
-}
-
-.navbar a {
-  transition: margin-left 0.1s;
-}
-
-.navbar li:not(:first-child) a:hover {
-  color: #15778A;
-  margin-left: 7px;
-}
-
-.navbar .active::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 8px;
-  left: -10px;
-  display: block;
-  width: 140px;
-  height: 20px;
-  background-color: #FBF182;
-}
-
 .user-block {
   width: max-content;
   height: max-content;
