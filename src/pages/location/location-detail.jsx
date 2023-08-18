@@ -1,18 +1,21 @@
+import { Flex, Text, Title } from "@mantine/core"
 import { lazy } from "react"
 import { useParams } from "react-router-dom"
 import { useGetItem } from "shared/hooks"
 import { SuspenseRoute } from "shared/routing"
 import { ErrorBoundary, Loading } from "shared/ui"
 
-const NotFound = lazy(() => import("../not-found"))
+const NotFound = lazy(() => import("pages/not-found"))
 
 function LocationCard({ location }) {
   return (
-    <div>
-      <h1 className="title">{location.name}</h1>
-      <p>Type: {location.type}</p>
-      <p>Dimension: {location.dimension}</p>
-    </div>
+    <Flex direction="column" gap="md">
+      <Title>{location.name}</Title>
+      <Flex direction="column" gap={4}>
+        <Text>Type: {location.type}</Text>
+        <Text>Dimension: {location.dimension}</Text>
+      </Flex>
+    </Flex>
   )
 }
 
@@ -31,11 +34,9 @@ function LocationDetail() {
   }
 
   return (
-    <div className="content-wrapper">
-      <ErrorBoundary>
-        <LocationCard location={item} />
-      </ErrorBoundary>
-    </div>
+    <ErrorBoundary>
+      <LocationCard location={item} />
+    </ErrorBoundary>
   )
 }
 
