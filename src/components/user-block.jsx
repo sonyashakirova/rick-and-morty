@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom"
-import { useAuth } from "../context/auth-provider"
+import { useAuth } from "shared/hooks"
 
 export function UserBlock() {
   const { user, logout } = useAuth()
