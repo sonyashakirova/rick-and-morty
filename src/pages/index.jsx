@@ -3,15 +3,15 @@ import { Route, Routes } from "react-router-dom"
 import { PrivateRoute, SuspenseRoute } from "shared/routing"
 import { PageLayout } from "shared/ui"
 
-const Home = lazy(() => import("./home"))
-const Login = lazy(() => import("./login"))
-const CharacterDetail = lazy(() => import("./character/character-detail"))
-const CharacterList = lazy(() => import("./character/character-list"))
-const EpisodeDetail = lazy(() => import("./episode/episode-detail"))
-const EpisodeList = lazy(() => import("./episode/episode-list"))
-const LocationDetail = lazy(() => import("./location/location-detail"))
-const LocationList = lazy(() => import("./location/location-list"))
-const NotFound = lazy(() => import("./not-found"))
+const Home = lazy(() => import("pages/home"))
+const Login = lazy(() => import("pages/login"))
+const CharacterDetail = lazy(() => import("pages/character/character-detail"))
+const CharacterList = lazy(() => import("pages/character/character-list"))
+const EpisodeDetail = lazy(() => import("pages/episode/episode-detail"))
+const EpisodeList = lazy(() => import("pages/episode/episode-list"))
+const LocationDetail = lazy(() => import("pages/location/location-detail"))
+const LocationList = lazy(() => import("pages/location/location-list"))
+const NotFound = lazy(() => import("pages/not-found"))
 
 export function Pages() {
   return (
