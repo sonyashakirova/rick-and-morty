@@ -1,3 +1,4 @@
+import { Flex, Title } from "@mantine/core"
 import { useSearchParams } from "react-router-dom"
 import { useInfinityScroll } from "shared/hooks"
 import { ErrorBoundary, List, Sorting } from "shared/ui"
@@ -16,8 +17,8 @@ function CharacterList() {
   const sortedCharacters = sortByDate(items, sortingType)
 
   return (
-    <div className="content-wrapper">
-      <h1 className="title">Characters</h1>
+    <Flex direction="column" gap="md">
+      <Title order={1}>Characters</Title>
       <Sorting
         value={sortingType}
         onChange={(e) => setSearchParams({ sort: e.target.value })}
@@ -31,7 +32,7 @@ function CharacterList() {
           error={error}
         />
       </ErrorBoundary>
-    </div>
+    </Flex>
   )
 }
 
