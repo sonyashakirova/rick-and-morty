@@ -1,6 +1,5 @@
 export { Input } from "./input"
 export { List } from "./list"
-export { Loading } from "./loading"
 export { Navigation } from "./navigation"
 export { Sort } from "./sort"
 export { UserBlock } from "./user-block"
