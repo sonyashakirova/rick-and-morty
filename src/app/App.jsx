@@ -1,8 +1,8 @@
-import { BrowserRouter } from "react-router-dom";
-import { Navigation, UserBlock } from "./components";
-import { AuthProvider } from "./context/auth-provider";
-import { Pages } from "./pages";
-import "./styles.css"
+import { BrowserRouter } from "react-router-dom"
+import { Pages } from "pages"
+import { AuthProvider } from "../context/auth-provider"
+import { Navigation, UserBlock } from "../components"
+import "../styles.css"
 
 export function App() {
   return (
