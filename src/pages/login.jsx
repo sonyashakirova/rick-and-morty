@@ -1,7 +1,7 @@
+import { Button, PasswordInput, SimpleGrid, TextInput, Title } from "@mantine/core"
 import { useRef } from "react"
-import { Input } from "../components"
-import { useAuth } from "shared/hooks"
 import { useLocation, useNavigate } from "react-router-dom"
+import { useAuth } from "shared/hooks"
 
 const initialValues = {
   name: "",
@@ -28,33 +28,40 @@ function Login() {
   }
 
   return (
-    <div className="content-wrapper">
-      <h1 className="title">Login</h1>
+    <SimpleGrid cols={1}>
+      <Title order={1}>Login</Title>
       <form
-        className="form"
         onChange={handleChange}
         onSubmit={handleSubmit}
       >
-        <Input
-          id="login-name"
-          name="name"
-          label="Name"
-          placeholder="Enter your name"
-          required
-        />
-        <Input
-          id="login-password"
-          name="password"
-          type="password"
-          label="Password"
-          placeholder="Enter password"
-          required
-        />
-        <button className="button" type="submit">
-          Submit
-        </button>
+        <SimpleGrid cols={1}>
+          <TextInput
+            id="login-name"
+            name="name"
+            label="Name"
+            placeholder="Enter your name"
+            withAsterisk
+            required
+            miw={240}
+            maw={350}
+          />
+          <PasswordInput
+            id="login-password"
+            name="password"
+            type="password"
+            label="Password"
+            placeholder="Enter password"
+            withAsterisk
+            required
+            miw={240}
+            maw={350}
+          />
+          <Button type="submit" radius="md" w="max-content" mt={14}>
+            Submit
+          </Button>
+        </SimpleGrid>
       </form>
-    </div>
+    </SimpleGrid>
   )
 }
 
